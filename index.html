@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fuck you</title>
+  </head>
+  <body>
+    <div style="float:left; margin:20px">
+      <div>
+        <div>channel:</div>
+        <input id="channelIn" type="text" name="channel" value="123">
+      </div>
+      <div>
+        <div>password:</div>
+        <input id="passwordIn" type="password" name="password" value="">
+      </div>
+      <div>
+        <div>text:</div>
+        <textarea id="textIn" name="text"></textarea>
+      </div>
+      <div>
+        <button type="button" name="button" onclick="send()">send</button>
+      </div>
+    </div>
+
+
+    <div style="float:left; margin:20px">
+      <div>
+        <div>channel:</div>
+        <input id="channelOut" type="text" name="channel" value="123">
+      </div>
+      <div>
+        <div>password:</div>
+        <input id="passwordOut" type="password" name="password" value="">
+      </div>
+      <div>
+        <div>text:</div>
+        <textarea id="textOut" name="text" readonly></textarea>
+      </div>
+      <div>
+        <button type="button" name="button" onclick="recieve()">recieve</button>
+      </div>
+    </div>
+    <script src="public.js"></script>
+  </body>
+</html>
