@@ -1,11 +1,13 @@
-function send() {
+function send(btn) {
   let channel = document.getElementById("channelIn").value;
   let password = document.getElementById("passwordIn").value;
   let text = document.getElementById("textIn").value;
 
   fet("postText", {channel: channel, text: text, password: password});
+
+  flash(btn);
 }
-function recieve() {
+function recieve(btn) {
   let channel = document.getElementById("channelOut").value;
   let password = document.getElementById("passwordOut").value;
   let textElem = document.getElementById("textOut");
@@ -13,12 +15,16 @@ function recieve() {
   fet("getText", {channel: channel, password: password}, res=> {
     textElem.value = res.text;
   });
+
+  flash(btn);
 }
 
-
-
-
-
+function flash(btn) {
+  btn.style.backgroundColor = "rgba(0, 255, 0, 255)";
+  setTimeout(()=>{
+    btn.style.backgroundColor = "rgba(0, 255, 0, 0)"
+  }, 200);
+}
 
 function fet(url, body, callback = ()=>{}) {
     fetch(url,
